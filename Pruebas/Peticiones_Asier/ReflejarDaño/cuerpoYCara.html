@@ -1,0 +1,135 @@
+<html>
+ <head>
+  <title>
+   Web Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header .info {
+            flex-grow: 1;
+        }
+        .header .info .name {
+            font-weight: bold;
+        }
+        .header .info .role {
+            color: #888;
+            font-size: 12px;
+        }
+        .header .time {
+            color: #888;
+            font-size: 12px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .content .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .content .description {
+            display: flex;
+            align-items: center;
+        }
+        .content .description img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .targets, .damage {
+            margin-bottom: 10px;
+        }
+        .targets .label, .damage .label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .targets .value, .damage .value {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="Profile picture of Gareth Graystone" src="https://placehold.co/40x40"/>
+    <div class="info">
+     <div class="name">
+      Gareth Graystone
+     </div>
+     <div class="role">
+      Gamemaster
+     </div>
+    </div>
+    <div class="time">
+     3s ago
+    </div>
+   </div>
+   <div class="content">
+    <div class="title">
+     Gareth Graystone refleja el daño (radiant) a Thorin Martillo de Acero con Malla de Espinas.
+    </div>
+    <div class="description">
+     <img alt="Star icon" src="https://placehold.co/20x20"/>
+     <span>
+      Feature
+     </span>
+    </div>
+   </div>
+   <div class="targets">
+    <div class="label">
+     TARGETS
+    </div>
+    <div class="value">
+     1d8
+    </div>
+   </div>
+   <div class="damage">
+    <div class="label">
+     DAMAGE
+    </div>
+    <div class="value">
+     6
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
