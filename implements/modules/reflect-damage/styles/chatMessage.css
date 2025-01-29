@@ -1,0 +1,70 @@
+/* Contenedor principal */
+.reflection-container {
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título principal */
+  .reflection-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Estilo para los encabezados */
+  .reflection-container strong {
+    color: #ecf0f1;
+  }
+  
+  /* Línea horizontal */
+  .reflection-container hr {
+    border-color: #ecf0f1;
+    margin: 10px 0;
+  }
+  
+  /* Tabla */
+  .reflection-container table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para las filas de la tabla */
+  .reflection-container th,
+  .reflection-container td {
+    padding: 5px;
+    text-align: left;
+  }
+  
+  /* Encabezado de la tabla */
+  .reflection-container th {
+    background-color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  /* Filas alternas */
+  .reflection-container tr:nth-child(even) {
+    background-color: #34495e;
+  }
+  
+  /* Filas impares */
+  .reflection-container tr:nth-child(odd) {
+    background-color: #2c3e50;
+  }
+  
+  /* Estilo para los valores de la tabla */
+  .reflection-container td {
+    font-size: 14px;
+  }
+  
+  /* Resaltar información importante */
+  .reflection-container em {
+    font-style: italic;
+    color: #ecf0f1;
+  }
+  

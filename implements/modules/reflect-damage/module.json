@@ -1,0 +1,32 @@
+{
+  "id": "reflect-damage",
+  "title": "Reflect Damage",
+  "description": "A module to reflect damage back to attackers using passive effects.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Brian051",
+      "flags": {}
+    }
+  ],
+  "scripts": [
+    "scripts/reflect-damage.js"
+  ],
+  "styles": [
+    "styles/makeUp.css"
+  ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "12"
+  },
+  "dependencies": [
+    {
+      "name": "midi-qol",
+      "type": "module"
+    }
+  ],
+  "url": "https://github.com/Brian051/",
+  "manifest": "https://raw.githubusercontent.com/Brian051/fvtt-module-reflect-damage/main/module.json",
+  "download": "https://github.com/Brian051/fvtt-module-reflect-damage/releases/latest/download/module.zip"
+}
