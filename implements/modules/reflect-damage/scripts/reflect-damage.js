@@ -11,11 +11,8 @@ async function loadTemplate(path, data) {
 Hooks.on("midi-qol.DamageRollComplete", async (workflow) => {
   const attacker = workflow?.actor; // Actor que realiza el ataque
   const attackerName = attacker?.name; // Nombre del atacante
-  const damageTotal = workflow.damageTotal; // Daño total calculado
   const damageType = game.settings.get("reflect-damage", "damageType"); // Tipo de daño
 
-  console.log("Atacante:", attacker);
-  console.log("Daño total:", damageTotal);
 
   // Verifica si el ataque tiene al menos un objetivo
   const targets = workflow?.targets;
@@ -32,17 +29,16 @@ Hooks.on("midi-qol.DamageRollComplete", async (workflow) => {
         console.log(`${target.name} tiene MallaDeEspinas. Se refleja el daño.`);
 
         // Realiza una tirada de dados para calcular el daño reflejado
-        const roll = await new Roll("1d8").roll({ async: true });
+        const myRollSettingValue = game.settings.get('reflect-damage', 'dices') || 'default';
+        const roll = await new Roll(myRollSettingValue).roll({ async: true });
         const reflexDamage = roll.total;
-
-        console.log(`Daño reflejado (${damageType}): ${reflexDamage}`);
 
         // Aplica el daño reflejado al atacante
         await attacker.applyDamage(reflexDamage);
 
         // Cargar el HTML desde la plantilla
         const htmlContent = await loadTemplate(
-          "modules/reflect-damage/templates/message-template.html",
+          `modules/reflect-damage/templates/messageTemplate.html`,
           {
             attackerName: attackerName,
             reflexDamage: reflexDamage,
@@ -55,13 +51,9 @@ Hooks.on("midi-qol.DamageRollComplete", async (workflow) => {
         // Crea mensaje en el chat
         await ChatMessage.create({
           user: game.user.id,
-          speaker: { actor: attacker, token: attacker.token },
+          speaker: { actor: attacker, token: attacker?.token },
           content: htmlContent,
         });
-
-        console.log(
-          `${attackerName} recibe ${reflexDamage} puntos de daño (${damageType}).`
-        );
       }
     }
   } else {
