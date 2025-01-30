@@ -9,16 +9,20 @@
       "flags": {}
     }
   ],
-  "scripts": [
-    "scripts/reflect-damage.js"
+  "esmodules": [
+    "scripts/reflect-damage.js",
+    "scripts/reflect-damage-settings.js"
   ],
   "styles": [
     "styles/chatMessage.css"
   ],
+  "templates": [
+  "templates/message-template.html"
+  ],
   "compatibility": {
     "minimum": "10",
     "verified": "10",
-    "maximum": "12"
+    "maximum": "14"
   },
   "dependencies": [
     {
