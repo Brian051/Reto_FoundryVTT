@@ -13,7 +13,7 @@
     "scripts/reflect-damage.js"
   ],
   "styles": [
-    "styles/makeUp.css"
+    "styles/chatMessage.css"
   ],
   "compatibility": {
     "minimum": "10",
@@ -22,7 +22,7 @@
   },
   "dependencies": [
     {
-      "name": "midi-qol",
+      "id": "midi-qol",
       "type": "module"
     }
   ],
