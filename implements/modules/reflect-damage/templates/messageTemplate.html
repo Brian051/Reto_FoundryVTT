@@ -1,5 +1,5 @@
 <div class="reflect-damage-message">
-  <p><strong>{{attackerName}}</strong> recibe <strong>{{reflexDamage}}</strong> puntos de daño reflejado <strong>({{damageType}})</strong> de <strong>{{targetName}}</strong> debido a su <em>"Malla de Espinas"</em>.</p>
+  <p><strong>{{attackerName}}</strong> recibe <strong>{{reflexDamage}}</strong> puntos de daño reflejado <strong>({{damageType}})</strong> de <strong>{{targetName}}</strong> debido a su <em>"{{spikedArmorName}}"</em>.</p>
   <hr>
   <table class="reflect-damage-table">
     <tr>
@@ -22,5 +22,11 @@
       <td><strong>Tirada de Daño</strong></td>
       <td>{{rollFormula}} = {{reflexDamage}}</td>
     </tr>
+    {{#if resistanceText}}
+    <tr>
+      <td><strong>Resistencia</strong></td>
+      <td>{{resistanceText}}</td>
+    </tr>
+    {{/if}}
   </table>
 </div>
