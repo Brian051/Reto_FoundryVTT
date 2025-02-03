@@ -1,4 +1,3 @@
-
 Hooks.once("ready", () => {
     // Llama a la función que configurará los ajustes del módulo
     console.log("Reflect Damage Module está listo.");
