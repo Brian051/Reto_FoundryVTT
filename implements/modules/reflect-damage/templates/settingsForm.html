@@ -1,0 +1,37 @@
+<form autocomplete="off">
+  <div class="form-group">
+    <label for="armor-list">Lista de Armaduras Espinosas:</label>
+    <div id="armor-list">
+      {{#each config as |armor key|}}
+      <div class="armor-entry" data-armor="{{key}}">
+        <label>Nombre de armadura:</label>
+        <input type="text" name="armorName_{{key}}" value="{{key}}" />
+
+        <label>Dados:</label>
+        <input type="text" name="diceRoll_{{key}}" value="{{armor.diceRoll}}" />
+
+        <label>Tipo de daño:</label>
+        <select name="damageType_{{key}}">
+          <option value="piercing" {{#if (eq armor.damageType "piercing")}}selected{{/if}}>Perforante</option>
+          <option value="slashing" {{#if (eq armor.damageType "slashing")}}selected{{/if}}>Cortante</option>
+          <option value="bludgeoning" {{#if (eq armor.damageType "bludgeoning")}}selected{{/if}}>Contundente</option>
+          <option value="fire" {{#if (eq armor.damageType "fire")}}selected{{/if}}>Fuego</option>
+          <option value="cold" {{#if (eq armor.damageType "cold")}}selected{{/if}}>Frío</option>
+          <option value="thunder" {{#if (eq armor.damageType "thunder")}}selected{{/if}}>Trueno</option>
+          <option value="lightning" {{#if (eq armor.damageType "lightning")}}selected{{/if}}>Rayo</option>
+          <option value="acid" {{#if (eq armor.damageType "acid")}}selected{{/if}}>Ácido</option>
+          <option value="poison" {{#if (eq armor.damageType "poison")}}selected{{/if}}>Veneno</option>
+          <option value="necrotic" {{#if (eq armor.damageType "necrotic")}}selected{{/if}}>Necrótico</option>
+          <option value="radiant" {{#if (eq armor.damageType "radiant")}}selected{{/if}}>Radiante</option>
+        </select>
+
+        <label>Descripción:</label>
+        <input type="text" name="description_{{key}}" value="{{armor.description}}" />
+
+        <button type="button" class="remove-armor" data-armor="{{key}}">Eliminar</button>
+      </div>
+      {{/each}}
+    </div>
+    <button type="button" id="add-armor">Añadir Armadura</button>
+  </div>
+</form>
