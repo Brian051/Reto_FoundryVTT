@@ -1,0 +1,50 @@
+<div class="armor-config-container">
+  <h2>Configuración de Armaduras Espinosas</h2>
+  <table class="armor-list">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Receta de Daño</th>
+        <th>Tipo de Daño</th>
+        <th>Icono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each armors}}
+      <tr>
+        <td>{{this.nombre}}</td>
+        <td>{{this.receta}}</td>
+        <td>{{this.tipoDaño}}</td>
+        <td><img src="{{this.img}}" alt="{{this.nombre}}" width="30"></td>
+        <td>
+          <button class="edit-armor" data-id="{{this.id}}">Editar</button>
+          <button class="delete-armor" data-id="{{this.id}}">Eliminar</button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <button class="add-armor">Agregar Nueva Armadura</button>
+</div>
+
+<!-- Formulario de Edición de Armadura -->
+<div class="edit-armor-form hidden">
+  <h3>Editar Armadura</h3>
+  <form id="armor-form">
+    <label for="armor-name">Nombre</label>
+    <input type="text" id="armor-name" name="nombre" required>
+
+    <label for="armor-damage">Receta de Daño</label>
+    <input type="text" id="armor-damage" name="receta" required>
+
+    <label for="armor-type">Tipo de Daño</label>
+    <input type="text" id="armor-type" name="tipoDaño" required>
+
+    <label for="armor-icon">Icono</label>
+    <input type="text" id="armor-icon" name="icono" required>
+
+    <button type="submit">Guardar Cambios</button>
+    <button type="button" class="cancel-edit">Cancelar</button>
+  </form>
+</div>
